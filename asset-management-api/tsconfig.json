@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs", // Ensure you are using commonjs
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true, // Ensure this is true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true // Optional, helps with type checking in libraries
+  },
+  "include": ["smartcontractapi.ts","appuser.ts"]
+}
