@@ -2,8 +2,8 @@ import { Wallets } from 'fabric-network';
 import * as path from 'path';
 
 async function createWalletIdentity() {
-    const userName = 'harshith'; // Define the user name
-    const walletPath = path.join(process.cwd(), 'wallet'); // Update as necessary
+    const userName = 'harshith';
+    const walletPath = path.join(process.cwd(), 'wallet');
     const wallet = await Wallets.newFileSystemWallet(walletPath);
 
     const userIdentity = {
@@ -24,18 +24,18 @@ ZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1lbnRJRCI6Im9yZGVyZXJBZG1pbiIs
 ImhmLlR5cGUiOiJhZG1pbiJ9fTAKBggqhkjOPQQDAgNHADBEAiBej0b06MGXjXwD
 xdbnCNHfvBRh1Jf/U2vrnaDBSUdnEQIgC8MrMqJq/bvtMJS3WlZ5W1CHcvtVnT4v
 yidspPUn8zo=
------END CERTIFICATE-----`, // Use template literal for multiline
+-----END CERTIFICATE-----`,
             privateKey: `-----BEGIN PRIVATE KEY-----
 MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgp+P88ZyYVzHScik+
 +urBYkyahALSYXj+GJWhq5D2pzahRANCAASp4igh+2gsLRwZQ0PBXkUsGHgafdBV
 ga7ASDOBPIri46+wrklAd6rm0QsUxAV/UxLn3JwVQlMhIvGHQgGHT2xy
------END PRIVATE KEY-----`, // Use template literal for multiline
+-----END PRIVATE KEY-----`,
         },
-        mspId: 'Org1MSP', // Update with your organization MSP ID
+        mspId: 'Org1MSP',
         type: 'X.509',
     };
 
-    await wallet.put(userName, userIdentity); // Use userName from above
+    await wallet.put(userName, userIdentity);
     console.log(`Identity "${userName}" added to the wallet`);
 }
 
