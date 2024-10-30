@@ -21,7 +21,7 @@ async function getContract() {
     const wallet = await getWallet();
     await gateway.connect(ccp, {
         wallet,
-        identity: 'harshith', // replace with your user identity
+        identity: 'harshith',
         discovery: { enabled: true, asLocalhost: true }
     });
     const network = await gateway.getNetwork('mychannel');
